@@ -4,16 +4,16 @@
  */
 
 import { render, screen } from "@testing-library/react";
-import Greet from "./greet";
+import Greet from "../components/greet/greet";
 
 describe("Greet", () => {
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     render(<Greet />);
     const textElement = screen.getByText(/hello/i);
     expect(textElement).toBeInTheDocument();
   });
 
-  xit("renders a name", () => {
+  test.only("renders a name", () => {
     render(<Greet name="Vishwas" />);
     const textElement = screen.getByText("Hello Vishwas");
     expect(textElement).toBeInTheDocument();

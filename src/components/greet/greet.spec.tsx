@@ -13,7 +13,7 @@ describe("Greet", () => {
     expect(textElement).toBeInTheDocument();
   });
 
-  xit("renders a name", () => {
+  it("renders a name", () => {
     render(<Greet name="Vishwas" />);
     const textElement = screen.getByText("Hello Vishwas");
     expect(textElement).toBeInTheDocument();
